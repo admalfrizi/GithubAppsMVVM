@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Github API Apps</string>
+    <string name="title_activity_nav_bottom">NavBottom</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_search">Search</string>
+    <string name="data_yang_ada_tidak_tersedia">Data yang ada tidak tersedia</string>
+    <string name="terjadi_kesalahan">Terjadi Kesalahan !!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="repos">Repos</string>
+    <string name="backbtn">backBtn</string>
+</resources>

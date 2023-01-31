@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.searchFragment.UsersSearchFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        tools:ignore="UselessParent">
+
+        <EditText
+            android:id="@+id/users_query"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:importantForAutofill="no"
+            android:background="@drawable/ed_txt"
+            android:inputType="text"
+            android:paddingVertical="10dp"
+            android:paddingStart="14dp"
+            android:drawablePadding="10dp"
+            android:paddingHorizontal="12dp"
+            android:layout_marginEnd="20dp"
+            android:drawableStart="@drawable/ic_search"
+            tools:ignore="LabelFor,RtlSymmetry" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/data_users_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/user_list_view" />
+
+        <TextView
+            android:id="@+id/error_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/terjadi_kesalahan"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/empty_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/data_yang_ada_tidak_tersedia"
+            android:visibility="gone"
+            />
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
