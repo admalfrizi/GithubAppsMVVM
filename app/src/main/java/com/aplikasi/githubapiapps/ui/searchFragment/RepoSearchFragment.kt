@@ -1,11 +1,9 @@
 package com.aplikasi.githubapiapps.ui.searchFragment
 
 import android.annotation.SuppressLint
-import android.content.ContentValues
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -79,19 +77,10 @@ class RepoSearchFragment : Fragment() {
                         binding.emptyTv.visibility = View.VISIBLE
                     }
 
-
-                }
-                State.ERROR -> {
-                    if(it.data?.items!!.isEmpty()){
-                        binding.errorTv.visibility = View.GONE
-                    } else {
-                        binding.errorTv.visibility = View.VISIBLE
-                    }
-
-                    Log.d(ContentValues.TAG,"Error ")
                 }
                 State.LOADING -> {
                 }
+                else -> {}
             }
         }
 

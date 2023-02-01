@@ -1,12 +1,10 @@
 package com.aplikasi.githubapiapps.ui.searchFragment
 
 import android.annotation.SuppressLint
-import android.content.ContentValues
 import android.os.Build
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -84,12 +82,9 @@ class UsersSearchFragment : Fragment() {
                     }
 
                 }
-                State.ERROR -> {
-                    binding.errorTv.visibility = View.VISIBLE
-                    Log.d(ContentValues.TAG,"Error " + it.msg)
-                }
                 State.LOADING -> {
                 }
+                else -> {}
             }
         }
     }

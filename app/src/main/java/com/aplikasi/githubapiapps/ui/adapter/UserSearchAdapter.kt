@@ -60,6 +60,7 @@ class UserSearchAdapter(private val context : Context, private var userList: Lis
 
     override fun getFilter() : android.widget.Filter  {
         return object : android.widget.Filter() {
+            @SuppressLint("NotifyDataSetChanged")
             override fun performFiltering(constraint: CharSequence?): FilterResults {
                 val queryString = constraint.toString()
                 val filterResults = FilterResults()
