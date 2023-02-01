@@ -114,4 +114,18 @@ class AppRepository @Inject constructor(private val rmtData : RemoteDataSource) 
     }.catch {
             e -> emit(Resource.error(e.message ?: "Terjadi Kesalahan", null))
     }
+
+    fun getSearchingRepos(repoQuery: String) = flow {
+        emit(Resource.loading(null))
+        rmtData.getSearchRepos(repoQuery).let {
+            if(it.isSuccessful){
+                val result = it.body()
+                emit(Resource.success(result))
+            }else {
+                emit(Resource.error(it.message(), null))
+            }
+        }
+    }.catch {
+            e -> emit(Resource.error(e.message ?: "Terjadi Kesalahan", null))
+    }
 }

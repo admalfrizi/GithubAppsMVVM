@@ -18,4 +18,6 @@ class RemoteDataSource @Inject constructor(private val api : Routes) {
     suspend fun getUserFollowings(nameUser: String) = api.getUserFollowings(nameUser)
 
     suspend fun getSearchUsers(nameQuery: String) = api.getSearchingUsers(nameQuery)
+
+    suspend fun getSearchRepos(repoQuery: String) = api.getSearchingRepos(repoQuery)
 }

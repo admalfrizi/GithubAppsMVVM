@@ -12,4 +12,6 @@ class SearchViewModel @Inject constructor(
 ) : ViewModel() {
 
     fun getSearchingUsers(nameQuery: String) = repo.getSearchingUsers(nameQuery).asLiveData()
+
+    fun getSearchingRepos(repoQuery: String) = repo.getSearchingRepos(repoQuery).asLiveData()
 }

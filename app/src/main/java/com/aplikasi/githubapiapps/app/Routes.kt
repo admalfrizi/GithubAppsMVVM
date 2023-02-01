@@ -39,4 +39,9 @@ interface Routes {
     suspend fun getSearchingUsers(
         @Query("q") q: String?
     ): Response<ResponseSearchUsersModel>
+
+    @GET(Constants.SEARCH_REPOS_URL)
+    suspend fun getSearchingRepos(
+        @Query("q") q: String?
+    ): Response<ResponseSearchReposModel>
 }

@@ -14,6 +14,7 @@
         tools:ignore="UselessParent">
 
         <EditText
+            android:id="@+id/repo_query"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -21,6 +22,7 @@
             android:background="@drawable/ed_txt"
             android:inputType="text"
             android:paddingVertical="10dp"
+            android:drawablePadding="10dp"
             android:paddingStart="14dp"
             android:paddingHorizontal="12dp"
             android:layout_marginEnd="20dp"
@@ -34,7 +36,7 @@
         android:layout_height="wrap_content">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/data_users_search"
+            android:id="@+id/data_repos_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
